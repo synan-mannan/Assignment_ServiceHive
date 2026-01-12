@@ -216,12 +216,12 @@ EMAIL_PASSWORD=xxxx xxxx xxxx xxxx
 
 # Or Custom SMTP
 SMTP_HOST=smtp.your-server.com
-SMTP_PORT=587
+SMTP_HOST=live.smtp.mailtrap.io
 SMTP_USER=your-email
 SMTP_PASSWORD=your-password
 
 # Always needed
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 ```
 
 ### Email Service API

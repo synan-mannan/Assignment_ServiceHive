@@ -27,7 +27,7 @@ PORT=5000
 MONGODB_URI=mongodb://localhost:27017/gigflow
 JWT_SECRET=your_secret_key_here
 NODE_ENV=development
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 ```
 
 Start MongoDB (if local):
@@ -50,7 +50,7 @@ npm run dev     # Development
 npm start       # Production
 ```
 
-Expected: `Server is running on port 5000`
+Expected: `Server is running successfully`
 
 ## Frontend Setup
 
@@ -62,7 +62,7 @@ npm install
 npm run dev
 ```
 
-Expected: `http://localhost:5173`
+Expected: `Frontend is running`
 
 ## Test the App
 
@@ -100,7 +100,7 @@ Update backend URL in production.
 | Problem                  | Solution                                      |
 | ------------------------ | --------------------------------------------- |
 | MongoDB connection fails | Ensure MongoDB is running, verify URI in .env |
-| CORS errors              | Backend on port 5000, frontend on 5173        |
+| CORS errors              | Verify both services are running           |
 | Port already in use      | Kill process or use different port            |
 
 ---

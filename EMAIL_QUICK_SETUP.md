@@ -17,7 +17,7 @@
 # Add these lines:
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=xxxx xxxx xxxx xxxx
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 ```
 
 **Note:** Remove spaces from the password if copying
@@ -88,7 +88,7 @@ Don't want to use real Gmail?
 
 ```env
 SMTP_HOST=live.smtp.mailtrap.io
-SMTP_PORT=587
+SMTP_HOST=live.smtp.mailtrap.io
 SMTP_SECURE=false
 SMTP_USER=your-mailtrap-user
 SMTP_PASSWORD=your-mailtrap-password

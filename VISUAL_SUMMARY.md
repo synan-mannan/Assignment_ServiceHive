@@ -267,11 +267,11 @@ npm install socket.io-client   # Frontend
 
 ```env
 # Backend
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 PORT=5000
 
 # Frontend
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 ```
 
 ### Run
@@ -419,7 +419,7 @@ All features are:
 ```bash
 cd gigflow-backend && npm run dev   # Terminal 1
 cd gigflow-frontend && npm run dev  # Terminal 2
-# Open http://localhost:5173
+# Open http://localhost
 # Login as different users and test!
 ```
 

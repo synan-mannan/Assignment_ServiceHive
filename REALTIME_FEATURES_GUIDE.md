@@ -55,14 +55,14 @@ npm install lucide-react --save
 **`gigflow-backend/.env`**
 
 ```env
-FRONTEND_URL=http://localhost:5173
-PORT=5000
+FRONTEND_URL=http://localhost
+# Backend environment variables
 ```
 
 **`gigflow-frontend/.env.local`** (create if doesn't exist)
 
 ```env
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 ```
 
 ### 3. Start Servers

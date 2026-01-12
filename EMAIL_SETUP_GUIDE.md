@@ -62,7 +62,7 @@ Email notifications have been integrated into GigFlow. When a freelancer is hire
 If you have a custom SMTP server:
 
 - Host: your-smtp-host.com
-- Port: usually 587 (TLS) or 465 (SSL)
+- TLS Port for secure connections
 - Username: your-email@your-domain.com
 - Password: your-smtp-password
 
@@ -79,13 +79,13 @@ EMAIL_PASSWORD=your-16-char-app-password
 
 # Or for custom SMTP (uncomment if using custom)
 # SMTP_HOST=smtp.your-server.com
-# SMTP_PORT=587
+SMTP_HOST=smtp.mailtrap.io
 # SMTP_SECURE=false
 # SMTP_USER=your-email@your-domain.com
 # SMTP_PASSWORD=your-password
 
 # Frontend URL (for email links)
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 ```
 
 ---
@@ -231,7 +231,7 @@ Update `.env`:
 
 ```env
 SMTP_HOST=localhost
-SMTP_PORT=1025
+SMTP_HOST=live.smtp.mailtrap.io
 SMTP_SECURE=false
 SMTP_USER=test@example.com
 SMTP_PASSWORD=anything
@@ -302,8 +302,8 @@ Error sending hire email to freelancer@example.com: [error message]
 | ---------------------------- | ------------------------------------------------------------ |
 | Invalid email credentials    | Check EMAIL_USER and EMAIL_PASSWORD in .env                  |
 | Gmail app password incorrect | Generate new app password, remove spaces                     |
-| SMTP connection refused      | Check SMTP_HOST and SMTP_PORT are correct                    |
-| TLS error                    | For Gmail, use port 587 and SMTP_SECURE=false                |
+| SMTP connection refused      | Check SMTP_HOST is correct                       |
+| TLS error                    | Verify your SMTP credentials                   |
 | Rate limited                 | Some providers limit email frequency - wait before resending |
 
 ---
@@ -355,7 +355,7 @@ Error sending hire email to freelancer@example.com: [error message]
 // Replace the transporter initialization with:
 this.transporter = nodemailer.createTransport({
   host: "smtp.sendgrid.net",
-  port: 587,
+SMTP_HOST: 'live.smtp.mailtrap.io',
   auth: {
     user: "apikey",
     pass: process.env.SENDGRID_API_KEY,

@@ -124,7 +124,7 @@ try {
 
 ```javascript
 // In useNotifications hook
-const socketInstance = io("http://localhost:5000");
+const socketInstance = io("http://localhost");
 
 socketInstance.on("connect", () => {
   socketInstance.emit("register_user", userId);
@@ -168,11 +168,11 @@ socketInstance.on("hire_notification", (notification) => {
 
 ```env
 # Backend
-FRONTEND_URL=http://localhost:5173
-PORT=5000
+FRONTEND_URL=http://localhost
+# Backend configuration
 
 # Frontend
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 ```
 
 ### 2. Start Servers
@@ -187,8 +187,8 @@ cd gigflow-frontend && npm run dev
 
 ### 3. Verify
 
-- Backend: `Server is running on port 5000`
-- Frontend: `http://localhost:5173`
+- Backend: `Server is running successfully`
+- Frontend: `Frontend is running`
 - App shows: `✓ Connected` badge
 
 ---
@@ -273,4 +273,4 @@ npm run dev  # in gigflow-backend
 npm run dev  # in gigflow-frontend
 ```
 
-Then open http://localhost:5173 and try hiring someone!
+Then open the frontend app and try hiring someone!

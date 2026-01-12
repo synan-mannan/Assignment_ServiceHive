@@ -60,7 +60,7 @@ File: gigflow-backend/.env
 Add these lines:
 ├─ EMAIL_USER=your-email@gmail.com
 ├─ EMAIL_PASSWORD=xxxx xxxx xxxx xxxx
-└─ FRONTEND_URL=http://localhost:5173
+└─ FRONTEND_URL=http://localhost
 
 STEP 3: Restart Server (10 seconds)
 ─────────────────────────────────────
@@ -75,7 +75,7 @@ DONE! Emails now active
 TEST IT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Open browser → http://localhost:5173
+1. Open browser → Frontend app
 2. Login as Client → Find a gig with bids
 3. Click "Hire" on a freelancer bid
 4. Wait 30-60 seconds
@@ -141,7 +141,7 @@ OPTION 1: Gmail (Easy for Testing)
 OPTION 2: Mailtrap (Free Testing)
 ┌──────────────────────────────────────┐
 │ SMTP_HOST=live.smtp.mailtrap.io │
-│ SMTP_PORT=587 │
+│ SMTP_HOST=live.smtp.mailtrap.io │
 │ SMTP_USER=your-mailtrap-user │
 │ SMTP_PASSWORD=your-mailtrap-pass │
 │ │

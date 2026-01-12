@@ -188,11 +188,11 @@ EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=your-16-char-app-password
 
 # Frontend URL (for email links)
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 
 # Optional: Custom SMTP (comment out if using Gmail)
 # SMTP_HOST=smtp.your-server.com
-# SMTP_PORT=587
+# SMTP configuration (for custom SMTP)
 # SMTP_SECURE=false
 # SMTP_USER=your-email@your-domain.com
 # SMTP_PASSWORD=your-password
@@ -214,7 +214,7 @@ FRONTEND_URL=http://localhost:5173
 ```env
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=xxxx xxxx xxxx xxxx
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 ```
 
 ### 3. Restart Server

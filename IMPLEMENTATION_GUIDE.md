@@ -177,7 +177,7 @@ app.use((req, res, next) => {
 
 // Change app.listen to server.listen
 server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running successfully`);
 });
 ```
 
@@ -221,7 +221,7 @@ export const useNotifications = (userId, isAuthenticated) => {
     if (!isAuthenticated || !userId) return;
 
     // Connect to Socket.io server
-    const socketInstance = io("http://localhost:5000", {
+    const socketInstance = io("http://localhost", {
       reconnection: true,
       reconnectionDelay: 1000,
       reconnectionAttempts: 5,
@@ -355,11 +355,11 @@ Add to `.env`:
 
 ```env
 # Backend
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost
 PORT=5000
 
 # Frontend
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 ```
 
 ### Frontend Vite Configuration
@@ -370,7 +370,7 @@ In `gigflow-frontend/vite.config.js`:
 export default {
   define: {
     "import.meta.env.VITE_BACKEND_URL": JSON.stringify(
-      process.env.VITE_BACKEND_URL || "http://localhost:5000"
+      process.env.VITE_BACKEND_URL || "http://localhost"
     ),
   },
 };
@@ -387,10 +387,10 @@ export default {
 npm run dev
 
 # Terminal 2 & 3: Simulate concurrent hire requests
-curl -X PATCH http://localhost:5000/api/bids/bid1/hire \
+curl -X PATCH http://localhost/api/bids/bid1/hire \
   -H "Authorization: Bearer TOKEN1"
 
-curl -X PATCH http://localhost:5000/api/bids/bid2/hire \
+curl -X PATCH http://localhost/api/bids/bid2/hire \
   -H "Authorization: Bearer TOKEN2"
 
 # Expected: One succeeds, one fails with "gig already assigned"
@@ -402,7 +402,7 @@ curl -X PATCH http://localhost:5000/api/bids/bid2/hire \
 // Open browser console, then:
 
 // In one browser (Freelancer)
-io("http://localhost:5000").on("hire_notification", (data) => {
+io("http://localhost").on("hire_notification", (data) => {
   console.log("Notified:", data);
 });
 

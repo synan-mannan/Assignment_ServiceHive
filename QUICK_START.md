@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Expected: `Server running on port 5000`
+Expected: `Server running successfully`
 
 **Terminal 2 - Frontend:**
 
@@ -26,11 +26,11 @@ npm install
 npm run dev
 ```
 
-Expected: `App running on http://localhost:5173`
+Expected: `Frontend running successfully`
 
 ## Test It
 
-1. Open [http://localhost:5173](http://localhost:5173)
+1. Open the frontend app
 2. Register → Create account
 3. Post Gig → Add a job
 4. Logout → Switch user
@@ -67,7 +67,7 @@ npm run preview   # Preview build
 | --------------------- | ----------------------------------------- |
 | MongoDB won't connect | Ensure MongoDB is running, check .env URI |
 | CORS errors           | Backend on 5000, frontend on 5173         |
-| Port in use           | Use `PORT=5001 npm run dev`               |
+| Port in use           | Check the terminal for available port   |
 | Login not working     | Clear browser cookies/localStorage        |
 | Can't see bids        | Login as job owner (different account)    |
 

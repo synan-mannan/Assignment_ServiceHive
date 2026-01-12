@@ -237,15 +237,15 @@ npm install socket.io-client lucide-react
 **`gigflow-backend/.env`**
 
 ```env
-FRONTEND_URL=http://localhost:5173
-PORT=5000
+FRONTEND_URL=http://localhost
+# Backend environment variables
 MONGODB_URI=<your-mongodb-connection>
 ```
 
 **`gigflow-frontend/.env.local`**
 
 ```env
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 ```
 
 ### 4. Run Application

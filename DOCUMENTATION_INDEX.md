@@ -211,8 +211,8 @@ Go to: COMPLETION_CHECKLIST.md → "Verify Everything Works" section
 
 ```env
 # See REALTIME_FEATURES_GUIDE.md or SUMMARY.md
-FRONTEND_URL=http://localhost:5173
-PORT=5000
+FRONTEND_URL=http://localhost
+# Backend configuration variables
 MONGODB_URI=...
 ```
 
@@ -220,7 +220,7 @@ MONGODB_URI=...
 
 ```env
 # See REALTIME_FEATURES_GUIDE.md
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 ```
 
 For details, see:

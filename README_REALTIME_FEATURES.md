@@ -93,24 +93,24 @@ STEP 2: Configuration
 
 # Backend: gigflow-backend/.env
 
-FRONTEND_URL=http://localhost:5173
-PORT=5000
+FRONTEND_URL=http://localhost
+# Backend environment variables
 
 # Frontend: gigflow-frontend/.env.local
 
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=http://localhost
 
 STEP 3: Start Servers
 
 # Terminal 1: Backend
 
 $ cd gigflow-backend && npm run dev
-→ Server is running on port 5000
+→ Server is running successfully
 
 # Terminal 2: Frontend
 
 $ cd gigflow-frontend && npm run dev
-→ http://localhost:5173
+→ Frontend is running
 
 STEP 4: Test
 
