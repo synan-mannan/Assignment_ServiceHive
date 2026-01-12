@@ -100,7 +100,7 @@ Update backend URL in production.
 | Problem                  | Solution                                      |
 | ------------------------ | --------------------------------------------- |
 | MongoDB connection fails | Ensure MongoDB is running, verify URI in .env |
-| CORS errors              | Verify both services are running           |
+| CORS errors              | Verify both services are running              |
 | Port already in use      | Kill process or use different port            |
 
 ---

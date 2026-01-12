@@ -67,7 +67,7 @@ npm run preview   # Preview build
 | --------------------- | ----------------------------------------- |
 | MongoDB won't connect | Ensure MongoDB is running, check .env URI |
 | CORS errors           | Backend on 5000, frontend on 5173         |
-| Port in use           | Check the terminal for available port   |
+| Port in use           | Check the terminal for available port     |
 | Login not working     | Clear browser cookies/localStorage        |
 | Can't see bids        | Login as job owner (different account)    |
 

@@ -302,8 +302,8 @@ Error sending hire email to freelancer@example.com: [error message]
 | ---------------------------- | ------------------------------------------------------------ |
 | Invalid email credentials    | Check EMAIL_USER and EMAIL_PASSWORD in .env                  |
 | Gmail app password incorrect | Generate new app password, remove spaces                     |
-| SMTP connection refused      | Check SMTP_HOST is correct                       |
-| TLS error                    | Verify your SMTP credentials                   |
+| SMTP connection refused      | Check SMTP_HOST is correct                                   |
+| TLS error                    | Verify your SMTP credentials                                 |
 | Rate limited                 | Some providers limit email frequency - wait before resending |
 
 ---
@@ -355,7 +355,7 @@ Error sending hire email to freelancer@example.com: [error message]
 // Replace the transporter initialization with:
 this.transporter = nodemailer.createTransport({
   host: "smtp.sendgrid.net",
-SMTP_HOST: 'live.smtp.mailtrap.io',
+  SMTP_HOST: "live.smtp.mailtrap.io",
   auth: {
     user: "apikey",
     pass: process.env.SENDGRID_API_KEY,

@@ -94,6 +94,7 @@ STEP 2: Configuration
 # Backend: gigflow-backend/.env
 
 FRONTEND_URL=http://localhost
+
 # Backend environment variables
 
 # Frontend: gigflow-frontend/.env.local

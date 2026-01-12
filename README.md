@@ -12,7 +12,7 @@ For more: [SETUP_GUIDE.md](./SETUP_GUIDE.md) | [PROJECT_SUMMARY.md](./PROJECT_SU
 
 ```
 Interview_assignment/
-├── gigflow-backend/          Node.js API (port 5000)
+├── gigflow-backend/          Node.js API (port "Mentioned in env file")
 │   ├── src/
 │   │   ├── models/          Data schemas
 │   │   ├── controllers/     Business logic
