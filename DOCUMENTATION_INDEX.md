@@ -5,6 +5,8 @@
 
 ---
 
+> NOTE: Real-time Socket.io functionality was removed on 2026-01-13. See individual guides for updated runtime behavior (notifications now use email/logging).
+
 ## Quick Navigation
 
 ### Getting Started (Start Here!)

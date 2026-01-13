@@ -47,7 +47,9 @@ Toast appears instantly!
 
 ### Backend (4 items)
 
-#### 1. Socket.io Server Setup
+#### 1. Socket.io Server Setup (Deprecated)
+
+> NOTE: Socket.io server integration was removed on 2026-01-13. Diagrams and flow below reflect the historical architecture.
 
 **File:** `src/server.js` (90 lines)
 

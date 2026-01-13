@@ -108,11 +108,15 @@ Request A                          Request B
 
 ## 2. Real-Time Updates via Socket.io
 
+### NOTE (Deprecated)
+
+The Socket.io-based real-time updates described below were removed on 2026-01-13. The current codebase does not establish socket connections; notifications are delivered via email/logging and the `notificationService` performs server-side logging. The historical implementation details are retained for reference.
+
 ### Problem
 
 Freelancers need instant notifications when hired, without page refresh.
 
-### Solution: Socket.io Integration
+### Solution: (Historical - Socket.io Integration)
 
 #### Architecture Overview
 

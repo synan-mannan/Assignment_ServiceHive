@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -14,14 +14,19 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import PostGig from "./pages/PostGig";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { useNotifications } from "./hooks/useNotifications";
+import Cookie from "js-cookie";
 
 function App() {
   const auth = useSelector((state) => state.auth);
-  const { notifications, isConnected, removeNotification } = useNotifications(
-    auth.user?.id || auth.user?._id,
-    auth.isAuthenticated
-  );
+
+  const notifications = [];
+  const isConnected = false;
+  const removeNotification = () => {};
+
+  let token = localStorage.getItem("token");
+  if (token && !Cookie.get("token")) {
+    Cookie.set("token", token, { expires: 30 });
+  }
 
   return (
     <Router>
@@ -30,11 +35,7 @@ function App() {
         notifications={notifications}
         onRemove={removeNotification}
       />
-      {isConnected && (
-        <div className="fixed bottom-4 left-4 text-xs text-green-600 bg-green-50 px-3 py-1 rounded">
-          Connected
-        </div>
-      )}
+
       <Routes>
         <Route path="/" element={<BrowseGigs />} />
         <Route path="/gig/:gigId" element={<GigDetails />} />

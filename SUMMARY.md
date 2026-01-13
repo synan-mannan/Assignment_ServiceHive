@@ -15,11 +15,13 @@ Two critical features have been successfully implemented in the GigFlow applicat
 - **Solution:** MongoDB Transactions ensure atomic operations
 - **Result:** Only ONE freelancer can be hired per gig, guaranteed
 
-### 2. ✅ Real-Time Updates (Socket.io Notifications)
+### 2. ✅ Real-Time Updates (Deprecated — Socket.io Notifications)
 
-- **Problem Solved:** Freelancers had to refresh to see if they were hired
-- **Solution:** Socket.io enables instant, bidirectional communication
-- **Result:** Freelancers receive instant notifications without page refresh
+> NOTE: Socket.io-based real-time notifications were removed on 2026-01-13. The current system does not use sockets; notifications are delivered via email/logging. The material below documents the prior Socket.io integration for historical reference.
+
+-- **Problem Solved:** Freelancers had to refresh to see if they were hired (historical)
+-- **Solution:** (historical) Socket.io enabled instant, bidirectional communication
+-- **Result:** Freelancers received instant notifications without page refresh (historical)
 
 ---
 

@@ -8,6 +8,8 @@ Ready to test
 
 ---
 
+> NOTE: Socket.io real-time features were removed on 2026-01-13. Quick test steps referencing sockets are historical; current system uses email/logging for notifications.
+
 ## What Was Implemented
 
 ### 1. Transactional Integrity (Race Condition Prevention)

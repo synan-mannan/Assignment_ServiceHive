@@ -32,9 +32,11 @@ FEATURE 2: REAL-TIME NOTIFICATIONS (Socket.io Integration)
 
 Problem Solved:
 
-- Eliminated: Need to refresh page to see if hired
-- Solution: Socket.io for real-time messaging
-- Result: Instant notifications without refresh
+> NOTE: The Socket.io-based real-time notification feature was removed on 2026-01-13. The repository no longer starts a Socket.io server or connects clients. Notifications are now delivered via email/logging. The section below documents the historical implementation for reference.
+
+-- Eliminated: Need to refresh page to see if hired (historical)
+-- Solution: (historical) Socket.io for real-time messaging
+-- Result: Instant notifications without refresh (historical)
 
 Technical Implementation:
 ├─ Socket.io server integration

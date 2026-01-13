@@ -8,12 +8,11 @@
 - Only ONE freelancer can be hired per gig, no matter how many concurrent requests
 - Automatic rollback on conflict
 
-### 2. **Real-Time Notifications via Socket.io**
+### 2. **Real-Time Notifications (Deprecated Socket.io)**
 
-- Freelancers receive instant notifications when hired
-- No page refresh needed
-- Toast-style notifications with budget and client info
-- Connection status indicator
+> NOTE: Socket.io-based real-time notifications were removed on 2026-01-13. The project no longer uses socket connections; notifications are delivered via email/logging. The guide below documents the historical Socket.io setup for reference only.
+
+// Historical behavior described below.
 
 ---
 

@@ -6,6 +6,9 @@
 
 ---
 
+> NOTE: Real-time Socket.io functionality was removed on 2026-01-13.
+> The codebase no longer establishes socket connections; notifications fall back to email/logging. Documentation below references the prior implementation.
+
 ## Feature 1: Transactional Integrity (Race Conditions)
 
 ### Requirements
