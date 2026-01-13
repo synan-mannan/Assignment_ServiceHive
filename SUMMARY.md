@@ -15,30 +15,11 @@ Two critical features have been successfully implemented in the GigFlow applicat
 - **Solution:** MongoDB Transactions ensure atomic operations
 - **Result:** Only ONE freelancer can be hired per gig, guaranteed
 
-### 2. ✅ Real-Time Updates (Deprecated — Socket.io Notifications)
-
-> NOTE: Socket.io-based real-time notifications were removed on 2026-01-13. The current system does not use sockets; notifications are delivered via email/logging. The material below documents the prior Socket.io integration for historical reference.
-
--- **Problem Solved:** Freelancers had to refresh to see if they were hired (historical)
--- **Solution:** (historical) Socket.io enabled instant, bidirectional communication
--- **Result:** Freelancers received instant notifications without page refresh (historical)
-
 ---
 
 ## 📦 Deliverables
 
 ### Backend Implementation
-
-#### 1. Server Integration - `src/server.js` ✅
-
-```javascript
-// Added:
-- HTTP server wrapper for Socket.io
-- Socket.io configuration with CORS
-- User socket tracking (userId → socketId mapping)
-- Socket event listeners (connection, registration, disconnect)
-- Middleware to inject io and userSockets into routes
-```
 
 **Key Features:**
 
@@ -47,15 +28,6 @@ Two critical features have been successfully implemented in the GigFlow applicat
 - Automatic cleanup on disconnect
 - Persistent socket map for targeting specific users
 
-#### 2. Notification Service - `src/services/notificationService.js` ✅ (NEW)
-
-```javascript
-// Provides:
-- notifyFreelancerHired() - Send hire notifications
-- notifyFreelancerRejected() - Send rejection notifications
-- broadcastGigUpdate() - Broadcast gig status changes
-- sendToUser() - Generic message sending
-```
 
 **Functionality:**
 
@@ -132,23 +104,8 @@ export const useNotifications = (userId, isAuthenticated) => {
 - Auto-removal callback
 - Connection status tracking
 
-#### 2. Notifications Component - `src/components/Notifications.jsx` ✅ (NEW)
 
-```javascript
-<Notifications notifications={notifications} onRemove={removeNotification} />
-```
-
-**Features:**
-
-- Toast-style notification display
-- Different styles for "hired" (green) and "rejected" (red) states
-- Icons from lucide-react
-- Budget and client name display
-- Manual dismiss with X button
-- Fixed position, stacked layout
-- Smooth animations
-
-#### 3. Enhanced App Component - `src/App.jsx` ✅
+#### 2. Enhanced App Component - `src/App.jsx` ✅
 
 ```javascript
 // Added:
@@ -164,7 +121,7 @@ export const useNotifications = (userId, isAuthenticated) => {
 - Passes notifications array and remove callback to component
 - Shows connection indicator for debugging
 
-#### 4. Dependencies
+#### 3. Dependencies
 
 - `socket.io-client` v4.x installed
 - `lucide-react` recommended (for icons)
@@ -204,7 +161,7 @@ export const useNotifications = (userId, isAuthenticated) => {
 ┌─────────────────────────────────────────────────────────────────┐
 │                  FREELANCER (Browser)                            │
 │                                                                   │
-│  1. Receives "hire_notification" event instantly               │
+│  1. Receives "hire_notification_Alert" event instantly               │
 │  2. Toast appears: "You have been hired..."                 │
 │  3. Shows: Budget, Client Name, Gig Title                     │
 │  4. Auto-dismisses after 5 seconds                            │
